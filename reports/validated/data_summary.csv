@@ -1,0 +1,4 @@
+location_rows,unique_accidents,accidents_with_multiple_location_rows,year,input_users,unknown_severity,retained_users,positive_users,accidents
+56518,56518,0,2021,129248,60,129188,22312,56518
+55302,55302,0,2022,126662,241,126421,22810,55302
+70860,54822,15870,2023,125789,118,125671,22669,54822

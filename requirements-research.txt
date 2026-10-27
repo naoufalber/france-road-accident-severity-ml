@@ -1,0 +1,5 @@
+-r requirements.txt
+# Optional dependencies for the historical scripts; those workflows were not rerun.
+seaborn
+optuna
+shap

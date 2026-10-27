@@ -1,0 +1,134 @@
+{
+  "created_utc": "2026-10-27T21:16:52.607246+00:00",
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "numpy": "2.3.5",
+  "sklearn": "1.8.0",
+  "train_years": [
+    2021,
+    2022
+  ],
+  "test_year": 2023,
+  "train_rows": 255609,
+  "test_rows": 125671,
+  "train_positive_rate": 0.17652743056778125,
+  "test_positive_rate": 0.18038370029680675,
+  "accident_overlap": 0,
+  "target_positive_codes": [
+    2,
+    3
+  ],
+  "threshold": 0.5,
+  "features": [
+    "catv",
+    "choc",
+    "manv",
+    "motor",
+    "catu",
+    "place",
+    "trajet",
+    "secu1",
+    "secu2",
+    "secu3",
+    "lum",
+    "atm",
+    "agg",
+    "int",
+    "col",
+    "surf",
+    "catr",
+    "mois",
+    "weekday",
+    "hour",
+    "vma",
+    "lat",
+    "long"
+  ],
+  "parameters": {
+    "n_estimators": 120,
+    "max_depth": 18,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "random_state": 42
+  },
+  "source_sha256": {
+    "2021/carcteristiques-2021.csv": "2af1ce3b896ccce9645836eba43a01b4430edaaa984cd1d5a5f099dc8df95b40",
+    "2021/lieux-2021.csv": "b0afe542e300e5fce28275302a3aca7b9f7c0d97fee3de59d346148c7885fd05",
+    "2021/usagers-2021.csv": "b5f2d7c269cdfda657a1516c90680a237e3a5f62d200c698c6d1e0415490563a",
+    "2021/vehicules-2021.csv": "fc688b1b2e6e2e526475ca897f9e800d54fed07733425b7181d280915c9372e9",
+    "2022/carcteristiques-2022.csv": "0b6e3b67192729b117697fd598a271b859fd5a48898bf10987eb047a0fb7ee1e",
+    "2022/lieux-2022.csv": "8f7a37d8c4dcad78a7aeb03569f57103f057900df4185d019fcc2e2e477fef76",
+    "2022/usagers-2022.csv": "f3c5fd2875c275807a624a3569d4e779abaeea29787975a1f3379399447be112",
+    "2022/vehicules-2022.csv": "ee2fe2a6e8b07d7095967f88eb11069382b48b07e3e1271dc655007e3cb9f61b",
+    "2023/carcteristiques-2023.csv": "e6cb8685b7e144e56365bed7c542bd90a95c3512431b9ba0e62a01cfd4a87ac0",
+    "2023/lieux-2023.csv": "80dda3688cc0b49b160a241982c87d8afdc2ebb2fc8306fffd2e4483d2315909",
+    "2023/usagers-2023.csv": "d309a59f0baff86cf3f082db9711e61690d23ea82ec8ebafcad7ab4c5e6b59b9",
+    "2023/vehicules-2023.csv": "24be234ca2e0625f9596a8aa6c8b14d168d862687af9c6ef4dd3618f3d9ddf0a"
+  },
+  "audit": [
+    {
+      "location_rows": 56518,
+      "unique_accidents": 56518,
+      "accidents_with_multiple_location_rows": 0,
+      "conflicting_location_attributes": {
+        "surf": 0,
+        "catr": 0,
+        "vma": 0
+      },
+      "year": 2021,
+      "input_users": 129248,
+      "unknown_severity": 60,
+      "retained_users": 129188,
+      "positive_users": 22312,
+      "accidents": 56518
+    },
+    {
+      "location_rows": 55302,
+      "unique_accidents": 55302,
+      "accidents_with_multiple_location_rows": 0,
+      "conflicting_location_attributes": {
+        "surf": 0,
+        "catr": 0,
+        "vma": 0
+      },
+      "year": 2022,
+      "input_users": 126662,
+      "unknown_severity": 241,
+      "retained_users": 126421,
+      "positive_users": 22810,
+      "accidents": 55302
+    },
+    {
+      "location_rows": 70860,
+      "unique_accidents": 54822,
+      "accidents_with_multiple_location_rows": 15870,
+      "conflicting_location_attributes": {
+        "surf": 350,
+        "catr": 0,
+        "vma": 5169
+      },
+      "year": 2023,
+      "input_users": 125789,
+      "unknown_severity": 118,
+      "retained_users": 125671,
+      "positive_users": 22669,
+      "accidents": 54822
+    }
+  ],
+  "confusion_matrix": [
+    [
+      79772,
+      23230
+    ],
+    [
+      5193,
+      17476
+    ]
+  ],
+  "limitations": [
+    "Retrospective classification of people already involved in a recorded injury accident.",
+    "Features include information recorded after the collision; no claim of pre-crash prediction.",
+    "No tuning, probability calibration, SHAP rerun or subgroup validation in this benchmark."
+  ]
+}
